@@ -4,3 +4,8 @@ value="true" />
 value="true" />
 <property name="hibernate.cache.region.factory_class"
 value="org.hibernate.cache.ehcache.EhCacheRegionFactory" />
+
+
+@Entity
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
