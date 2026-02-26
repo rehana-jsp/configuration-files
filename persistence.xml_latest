@@ -6,7 +6,7 @@
 
     <persistence-unit name="hibernate" transaction-type="RESOURCE_LOCAL">
 	<class>DTO.Mobile</class>
-		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
