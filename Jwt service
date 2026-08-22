@@ -1,5 +1,3 @@
-package com.jsp.bank_management_system.security;
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -12,11 +10,9 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    private final String SECRET_KEY =
-            "my-secret-key-my-secret-key-my-secret-key";
+    private final String SECRET_KEY = "my-secret-key-my-secret-key-my-secret-key";
 
-    private final long EXPIRATION_TIME =
-            1000 * 60 * 30; // 30 minutes
+    private final long EXPIRATION_TIME =  1000 * 60 * 30; // 30 minutes
 
     private SecretKey getKey() {
         return Keys.hmacShaKeyFor(
@@ -25,7 +21,6 @@ public class JwtService {
     }
 
     public String generateToken(String username) {
-
         return Jwts.builder()
                 .subject(username)
                 .issuedAt(new Date())
